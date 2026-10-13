@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff0f6">
+<meta name="description" content="A little surprise made to bring a smile.">
+<title>A Little Something for You 💗</title>
+<style>
+:root{--pink:#ef8fb5;--hot:#df5d91;--blush:#fff0f6;--pale:#fff9fc;--ink:#553747;--muted:#987888;--line:#f6d6e4;--shadow:0 18px 55px rgba(173,89,127,.13)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:var(--ink);font-family:ui-rounded,"Avenir Next",Avenir,"Segoe UI",sans-serif;background:radial-gradient(circle at 12% 8%,#ffe1ed 0,transparent 30%),radial-gradient(circle at 90% 85%,#fbe1ef 0,transparent 32%),var(--pale);overflow-x:hidden}
+button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #bc4b7d;outline-offset:3px}
+.floaties{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}.floaty{position:absolute;bottom:-40px;opacity:.28;animation:drift linear infinite;color:#e77ca8}@keyframes drift{to{transform:translateY(-115vh) rotate(35deg);opacity:0}}
+.app{position:relative;z-index:1;width:min(100% - 28px,900px);margin:0 auto;padding:26px 0 44px}.topline{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:24px}.brand{font-size:.84rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:800}.tiny-heart{border:1px solid var(--line);border-radius:99px;padding:8px 12px;background:#ffffffb8;color:var(--hot)}
+.screen{display:none;animation:appear .48s ease both}.screen.active{display:block}@keyframes appear{from{opacity:0;transform:translateY(12px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+.panel{background:rgba(255,255,255,.82);border:1px solid #fff;box-shadow:var(--shadow);border-radius:30px;padding:clamp(22px,5vw,48px)}.center{text-align:center}.eyebrow{color:var(--hot);font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2rem,6vw,3.5rem);line-height:1.08;letter-spacing:-.045em;margin:14px 0}h2{font-size:clamp(1.6rem,4vw,2.35rem);letter-spacing:-.035em;margin-bottom:10px}p{line-height:1.7;color:var(--muted)}.subtitle{max-width:510px;margin:0 auto 25px}.title-bounce{animation:titleBounce .38s ease}@keyframes titleBounce{0%,100%{transform:scale(1)}45%{transform:scale(1.035) rotate(-.4deg)}}
+.code-slots{display:flex;justify-content:center;gap:12px;margin:25px 0 22px}.slot{width:48px;height:54px;display:grid;place-items:center;border:1.5px solid var(--line);border-radius:16px;background:#fff9fc;color:var(--hot);font-size:1.4rem;box-shadow:0 5px 14px #e8a7c31a}.keypad{width:min(100%,300px);margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.key,.secondary,.primary{border:0;transition:transform .14s ease,box-shadow .14s ease,background .2s ease}.key{background:#fff;border:1px solid var(--line);border-radius:17px;min-height:52px;font-weight:750;color:var(--ink);box-shadow:0 5px 0 #f4d5e2}.key:active,.primary:active,.secondary:active,.menu-card:active{transform:translateY(2px) scale(.98);box-shadow:none}.key.special{color:var(--hot);background:#fff2f7;font-size:.9rem}.primary{background:linear-gradient(135deg,#ee91b7,#df6598);color:white;border-radius:999px;padding:13px 24px;font-weight:800;box-shadow:0 8px 18px #df659833}.primary:hover{box-shadow:0 11px 24px #df65984a;transform:translateY(-1px)}.secondary{background:#fff;color:var(--hot);border:1px solid var(--line);border-radius:999px;padding:11px 18px;font-weight:750}.error{min-height:25px;margin:12px 0 0;color:#c34c7c;font-size:.9rem}.sparkle{font-size:2.3rem;display:inline-block;animation:wiggle 2.8s ease-in-out infinite}@keyframes wiggle{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(8deg) translateY(-4px)}}
+.menu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:26px}.menu-card{text-align:left;padding:22px;border:1px solid var(--line);border-radius:23px;background:linear-gradient(145deg,#fff,#fff6fa);box-shadow:0 8px 25px #b96d8c0d;color:var(--ink);min-height:145px;transition:transform .18s,box-shadow .18s}.menu-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px #b96d8c1c}.menu-icon{font-size:1.8rem;display:block;margin-bottom:12px}.menu-card strong{display:block;font-size:1.06rem;margin-bottom:5px}.menu-card span:last-child{color:var(--muted);font-size:.88rem;line-height:1.5}
+.section-head{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:25px}.section-head p{margin-bottom:0}.portrait-wrap{max-width:360px;margin:22px auto 18px;padding:10px;background:linear-gradient(135deg,#ffc7dc,#fff,#f5a9ca);border-radius:34px;box-shadow:0 16px 35px #cb6b951f;transform:rotate(-1deg)}.portrait{min-height:300px;width:100%;display:block;object-fit:cover;border-radius:27px;background:#fff4f8}.photo-placeholder{min-height:300px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;padding:25px;border-radius:27px;text-align:center;color:var(--muted);background:repeating-linear-gradient(45deg,#fff6fa,#fff6fa 12px,#fff0f6 12px,#fff0f6 24px)}.photo-placeholder b{color:var(--hot)}.caption{font-family:Georgia,serif;font-style:italic;color:#a45c7c;text-align:center;margin:22px auto 0}.hidden{display:none!important}
+.music-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px;align-items:start}.playlist{display:grid;gap:10px}.song{display:flex;align-items:center;gap:12px;text-align:left;width:100%;padding:13px;border:1px solid var(--line);border-radius:17px;background:#fff;color:var(--ink)}.song.selected{background:#fff0f6;border-color:#e99cbb;box-shadow:0 6px 16px #df659817}.song-icon{flex:none;width:40px;height:40px;display:grid;place-items:center;border-radius:13px;background:#ffe0ed;color:#c84e82}.song-info{min-width:0;flex:1}.song-info strong{display:block;font-size:.95rem}.song-info small{color:var(--muted)}.song-play{color:var(--hot);font-weight:900}.player-card{background:linear-gradient(150deg,#fff2f8,#fff);border:1px solid var(--line);padding:15px;border-radius:22px}.player-art{border-radius:15px;min-height:125px;display:grid;place-items:center;background:radial-gradient(circle,#fff 0,#ffe1ee 65%,#f9c6dc 100%);font-size:3.4rem;margin-bottom:13px}.player-card h3{margin-bottom:4px;font-size:1.1rem}.player-card p{margin-bottom:13px;font-size:.9rem}.audio-player{width:100%;display:block;accent-color:#df6598}.player-note{font-size:.78rem;margin:10px 0 0;line-height:1.5}.letter{max-width:650px;margin:18px auto 0;padding:clamp(22px,5vw,42px);border-radius:8px 26px 26px 8px;border:1px solid #f7d5e3;border-left:5px solid #e88ab0;background:linear-gradient(135deg,#fffdfd,#fff6fa);box-shadow:0 15px 35px #b96d8c12}.letter p{color:#725566;white-space:pre-line}.letter .salutation{font-family:Georgia,serif;font-size:1.2rem;color:#d45d91}.flowers{display:flex;justify-content:center;gap:clamp(6px,3vw,25px);align-items:flex-end;min-height:210px;padding:12px 0 22px}.tulip{position:relative;font-size:clamp(3.2rem,10vw,5.7rem);transform-origin:bottom center;animation:sway 3s ease-in-out infinite;filter:drop-shadow(0 8px 6px #d76d981b)}.tulip:nth-child(2){animation-delay:-.7s;transform:rotate(-7deg)}.tulip:nth-child(3){animation-delay:-1.4s;transform:rotate(6deg)}.tulip:nth-child(4){animation-delay:-.4s}@keyframes sway{0%,100%{rotate:-4deg}50%{rotate:5deg}}.flower-message{font-family:Georgia,serif;font-size:clamp(1.35rem,4vw,1.8rem);color:#b84c7e;line-height:1.5;max-width:500px;margin:0 auto 12px}.footer{text-align:center;padding:22px 0 0;color:#b38b9c;font-size:.78rem}
+@media(max-width:620px){.app{width:min(100% - 20px,900px);padding-top:16px}.topline{margin-bottom:15px}.panel{border-radius:24px}.menu-grid{gap:10px}.menu-card{padding:17px;min-height:135px}.music-layout{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.section-head .secondary{align-self:flex-start}.portrait,.photo-placeholder{min-height:260px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="floaties" id="floaties" aria-hidden="true"></div>
+<main class="app">
+<div class="topline"><div class="brand">for egzi</div><div class="tiny-heart" aria-hidden="true">made with ♡</div></div>
+<section class="screen active" id="lock-screen" aria-labelledby="main-title"><div class="panel center">
+<span class="sparkle" aria-hidden="true">🎀</span><div class="eyebrow">psst... just for you</div>
+<h1 id="main-title">A Little Something for You 💗</h1>
+<p class="subtitle">Nothing dramatic, just a small surprise for someone who's been making my days a little more interesting.</p>
+<p style="margin-bottom:0;font-size:.9rem">A tiny secret code first...</p>
+<div class="code-slots" id="code-slots" aria-label="Four digit code"><span class="slot">♡</span><span class="slot">♡</span><span class="slot">♡</span><span class="slot">♡</span></div>
+<div class="keypad" aria-label="Secret code keypad">
+<button class="key" data-digit="1">1</button><button class="key" data-digit="2">2</button><button class="key" data-digit="3">3</button>
+<button class="key" data-digit="4">4</button><button class="key" data-digit="5">5</button><button class="key" data-digit="6">6</button>
+<button class="key" data-digit="7">7</button><button class="key" data-digit="8">8</button><button class="key" data-digit="9">9</button>
+<button class="key special" id="backspace" aria-label="Delete last digit">⌫</button><button class="key" data-digit="0">0</button><button class="key special" id="clear-code">Clear</button>
+</div><p class="error" id="code-error" role="status" aria-live="polite"></p><button class="primary" id="unlock-button">Open my surprise 💌</button>
+</div></section>
+<section class="screen" id="menu-screen" aria-labelledby="menu-title"><div class="panel center">
+<span class="sparkle" aria-hidden="true">💗</span><div class="eyebrow">mission accomplished</div><h1 id="menu-title">You unlocked it! 🎀</h1><p>Okay, now choose your little surprise.</p>
+<div class="menu-grid">
+<button class="menu-card" data-open="photo-screen"><span class="menu-icon">📸</span><strong>Her Picture</strong><span>A little photo moment</span></button>
+<button class="menu-card" data-open="music-screen"><span class="menu-icon">🎵</span><strong>A Tiny Playlist</strong><span>Three songs, one tiny playlist</span></button>
+<button class="menu-card" data-open="note-screen"><span class="menu-icon">💌</span><strong>A Little Note</strong><span>Something I wanted to tell you</span></button>
+<button class="menu-card" data-open="flowers-screen"><span class="menu-icon">🌷</span><strong>Digital Flowers</strong><span>These ones never wilt</span></button>
+</div></div></section>
+<section class="screen" id="photo-screen" aria-labelledby="photo-title"><div class="panel">
+<div class="section-head"><div><div class="eyebrow">a little photo moment</div><h2 id="photo-title">Your picture 📸</h2><p>A tiny frame for someone pretty cool.</p></div><button class="secondary back-button">← Back to menu</button></div>
+<div class="portrait-wrap"><img class="portrait hidden" id="her-photo" src="her-photo.jpg" alt="A favorite photo"><div class="photo-placeholder" id="photo-placeholder"><span style="font-size:3rem">🌸</span><b>Your photo goes here</b><span>Add a picture named <code>her-photo.jpg</code> beside <code>index.html</code>, then refresh this page.</span></div></div>
+<p class="caption">A little reminder that you have a lovely smile. 💗</p>
+</div></section>
+<section class="screen" id="music-screen" aria-labelledby="music-title"><div class="panel">
+<div class="section-head"><div><div class="eyebrow">press play, no pressure</div><h2 id="music-title">A Tiny Playlist 🎵</h2><p>Pick whichever one matches your mood.</p></div><button class="secondary back-button">← Back to menu</button></div>
+<div class="music-layout">
+<div class="playlist" id="playlist">
+<button class="song selected" data-song="0"><span class="song-icon">♫</span><span class="song-info"><strong>All of Me</strong><small>John Legend</small></span><span class="song-play">▶</span></button>
+<button class="song" data-song="1"><span class="song-icon">♫</span><span class="song-info"><strong>Perfect</strong><small>Ed Sheeran</small></span><span class="song-play">▶</span></button>
+<button class="song" data-song="2"><span class="song-icon">♫</span><span class="song-info"><strong>Ordinary</strong><small>Alex Warren</small></span><span class="song-play">▶</span></button>
+</div>
+<div class="player-card"><div class="player-art" aria-hidden="true">🎧💗</div><h3 id="now-playing-title">All of Me</h3><p id="now-playing-artist">John Legend</p>
+<audio class="audio-player" id="audio-player" controls preload="none">
+<source id="audio-source" src="music/all-of-me.mp3" type="audio/mpeg">
+Your browser does not support audio playback.
+</audio>
+<p class="player-note" id="audio-status" aria-live="polite">Add your three MP3 files to the music folder using the filenames shown in README.txt. Choose a song, then press play.</p>
+</div></div></div></section>
+<section class="screen" id="note-screen" aria-labelledby="note-title"><div class="panel">
+<div class="section-head"><div><div class="eyebrow">a little honesty</div><h2 id="note-title">A Little Note 💌</h2><p>Nothing too serious, promise.</p></div><button class="secondary back-button">← Back to menu</button></div>
+<article class="letter">
+<p class="salutation">Hey you, 💗</p>
+<p>I was actually working on this little website last night, and that's why I didn't text you. I got caught up trying to make it cute and get all the little details right 😂</p>
+<p>I like talking to you and getting to know you more. No pressure or big speech, I just wanted to make something small that might make you smile.</p>
+<p>Anyway, that's your surprise. Now act surprised 😂💗</p>
+</article></div></section>
+<section class="screen" id="flowers-screen" aria-labelledby="flowers-title"><div class="panel center">
+<div class="section-head" style="text-align:left"><div><div class="eyebrow">just because</div><h2 id="flowers-title">A few flowers for you 🌷</h2></div><button class="secondary back-button">← Back to menu</button></div>
+<div class="flowers" aria-label="Four gently swaying pink tulips"><span class="tulip">🌷</span><span class="tulip">🌷</span><span class="tulip">🌷</span><span class="tulip">🌷</span></div>
+<p class="flower-message">You make ordinary conversations feel a little less ordinary.</p><p>Consider these your digital flowers. No watering needed. 😌</p>
+<button class="primary" id="more-flowers">Send a little extra sparkle ✨</button><p class="error" id="flower-response" aria-live="polite"></p>
+</div></section>
+<div class="footer">made with a little effort and a little bit of courage ♡</div>
+</main>
+<script>
+const SECRET_CODE = "1919"; // Change this to customize the four-digit code.
+const screens=[...document.querySelectorAll(".screen")],slots=[...document.querySelectorAll(".slot")],title=document.getElementById("main-title"),error=document.getElementById("code-error");
+let enteredCode="",titleTimer;
+function animateTitle(){title.classList.remove("title-bounce");void title.offsetWidth;title.classList.add("title-bounce");clearTimeout(titleTimer);titleTimer=setTimeout(()=>title.classList.remove("title-bounce"),420)}
+function renderCode(){slots.forEach((slot,index)=>{slot.textContent=index<enteredCode.length?"♥":"♡";slot.style.transform=index===enteredCode.length-1?"scale(1.08)":"scale(1)"})}
+function addDigit(digit){animateTitle();if(enteredCode.length>=4)return;enteredCode+=digit;error.textContent="";renderCode()}
+function showScreen(id){screens.forEach(screen=>screen.classList.toggle("active",screen.id===id));window.scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"})}
+function unlock(){animateTitle();if(enteredCode===SECRET_CODE){error.textContent="";showScreen("menu-screen")}else{error.textContent="Hmm, not quite. Try that little code again 💗";const panel=document.querySelector("#lock-screen .panel");panel.animate([{transform:"translateX(0)"},{transform:"translateX(-5px)"},{transform:"translateX(5px)"},{transform:"translateX(0)"}],{duration:220});enteredCode="";renderCode()}}
+document.querySelectorAll("[data-digit]").forEach(button=>button.addEventListener("click",()=>addDigit(button.dataset.digit)));
+document.getElementById("backspace").addEventListener("click",()=>{animateTitle();enteredCode=enteredCode.slice(0,-1);error.textContent="";renderCode()});
+document.getElementById("clear-code").addEventListener("click",()=>{animateTitle();enteredCode="";error.textContent="";renderCode()});
+document.getElementById("unlock-button").addEventListener("click",unlock);
+document.addEventListener("keydown",event=>{if(!document.getElementById("lock-screen").classList.contains("active"))return;if(/^[0-9]$/.test(event.key))addDigit(event.key);else if(event.key==="Backspace"){enteredCode=enteredCode.slice(0,-1);renderCode()}else if(event.key==="Enter")unlock()});
+document.querySelectorAll("[data-open]").forEach(button=>button.addEventListener("click",()=>showScreen(button.dataset.open)));
+document.querySelectorAll(".back-button").forEach(button=>button.addEventListener("click",()=>showScreen("menu-screen")));
+const photo=document.getElementById("her-photo"),photoPlaceholder=document.getElementById("photo-placeholder");
+photo.addEventListener("load",()=>{photo.classList.remove("hidden");photoPlaceholder.classList.add("hidden")});
+photo.addEventListener("error",()=>{photo.classList.add("hidden");photoPlaceholder.classList.remove("hidden")});
+const songs=[
+{title:"All of Me",artist:"John Legend",file:"music/all-of-me.mp3"},
+{title:"Perfect",artist:"Ed Sheeran",file:"music/perfect.mp3"},
+{title:"Ordinary",artist:"Alex Warren",file:"music/ordinary.mp3"}
+];
+const audio=document.getElementById("audio-player"),audioSource=document.getElementById("audio-source"),audioStatus=document.getElementById("audio-status");
+function selectSong(index){const song=songs[index];document.querySelectorAll(".song").forEach((button,i)=>button.classList.toggle("selected",i===index));document.getElementById("now-playing-title").textContent=song.title;document.getElementById("now-playing-artist").textContent=song.artist;audio.pause();audioSource.src=song.file;audio.load();audioStatus.textContent="Selected "+song.title+". Press play to listen.";audio.dataset.selectedIndex=String(index)}
+document.querySelectorAll("[data-song]").forEach(button=>button.addEventListener("click",()=>selectSong(Number(button.dataset.song))));
+audio.addEventListener("error",()=>{audioStatus.textContent="Couldn't load this song. Check that the file is in the music folder and the filename matches README.txt."});
+audio.addEventListener("canplay",()=>{audioStatus.textContent="Ready to play. Enjoy the music 💗"});
+document.getElementById("more-flowers").addEventListener("click",()=>{document.getElementById("flower-response").textContent="Okay, one extra sparkle just for you ✨💗";for(let i=0;i<7;i++){const heart=document.createElement("span");heart.textContent=["♡","💗","✿","✨"][i%4];heart.className="floaty";heart.style.left=(12+Math.random()*76)+"%";heart.style.fontSize=(16+Math.random()*18)+"px";heart.style.animationDuration=(3.5+Math.random()*2.5)+"s";document.getElementById("floaties").appendChild(heart);setTimeout(()=>heart.remove(),6500)}});
+if(!matchMedia("(prefers-reduced-motion: reduce)").matches){const floaties=document.getElementById("floaties");for(let i=0;i<9;i++){const item=document.createElement("span");item.className="floaty";item.textContent=["♡","✿","♥"][i%3];item.style.left=(4+i*11)+"%";item.style.fontSize=(13+(i%3)*6)+"px";item.style.animationDuration=(12+(i%4)*3)+"s";item.style.animationDelay=(-i*1.7)+"s";floaties.appendChild(item)}}
+</script>
+</body>
+</html>

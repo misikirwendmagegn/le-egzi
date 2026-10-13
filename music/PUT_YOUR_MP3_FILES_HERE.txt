@@ -1,0 +1,4 @@
+Copy your MP3 files into this folder and rename them exactly:
+all-of-me.mp3
+perfect.mp3
+ordinary.mp3
